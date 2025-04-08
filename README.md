@@ -56,7 +56,7 @@ La gestion manuelle des projets étudiants présente plusieurs défis :
 
 ### ⚙️ Côté serveur (Backend) :
 - **Java Web** – Technologie principale pour la logique métier.
-- **JPA (Java Persistence API)** et **Hibernate** – Pour la gestion de la persistance des données de manière orientée objet.
+- **Hibernate** – Pour la gestion de la persistance des données de manière orientée objet.
 - **JDBC** – Utilisé ponctuellement pour des requêtes spécifiques non prises en charge par l’ORM.
 
 ### 🗃️ Base de données :
