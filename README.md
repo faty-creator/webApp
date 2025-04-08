@@ -6,7 +6,6 @@
 - [🎯 Objectifs](#-objectifs)
 - [🧩 Diagramme de Classe](#-diagramme-de-classe)
 - [🛠 Technologies](#-technologies)
-- [🚀 Installation](#-installation)
 
 ---
 
