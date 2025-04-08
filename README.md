@@ -44,4 +44,21 @@ La gestion manuelle des projets étudiants présente plusieurs défis :
 ## 🧩 Diagramme de Classe
  ![image](https://github.com/user-attachments/assets/f2433b90-adcf-49da-ae1f-f0235a4cbb6c)
 
-)
+---
+
+## 🛠 Technologies
+
+### 🖥️ Côté client (Frontend) :
+- **HTML5 / CSS3** – Pour la structure et le style des pages.
+- **JavaScript** – Pour les interactions dynamiques et la logique côté client.
+- **AJAX** – Permet des échanges asynchrones avec le serveur sans recharger la page (affectation en temps réel).
+- **Chart.js** – Génération de graphiques interactifs pour les statistiques liées aux encadrants et projets.
+
+### ⚙️ Côté serveur (Backend) :
+- **Java Web** – Technologie principale pour la logique métier.
+- **JPA (Java Persistence API)** et **Hibernate** – Pour la gestion de la persistance des données de manière orientée objet.
+- **JDBC** – Utilisé ponctuellement pour des requêtes spécifiques non prises en charge par l’ORM.
+
+### 🗃️ Base de données :
+- **MySQL** – Système relationnel pour la gestion des données (étudiants, enseignants, projets, affectations).
+
