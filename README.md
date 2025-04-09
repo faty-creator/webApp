@@ -1,11 +1,19 @@
 # 🎓 Gestion de Projets Étudiants
 
-## 📚 Sommaire
-- [📌 Contexte](#-contexte)
-- [❓ Problématique](#-problématique)
-- [🎯 Objectifs](#-objectifs)
-- [🧩 Diagramme de Classe](#-diagramme-de-classe)
-- [🛠 Technologies](#-technologies)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Java](https://img.shields.io/badge/Java-17%2B-orange)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
+
+Application web pour la gestion des projets académiques . 
+---
+## 📚 Sommaire  
+- [📌 Contexte](#-contexte)  
+- [❓ Problématique](#-problématique)  
+- [🎯 Objectifs](#-objectifs)  
+- [🧩 Diagramme de Classe](#-diagramme-de-classe)  
+- [🗃️ Modèle Conceptuel de la Base](#%EF%B8%8F-modèle-conceptuel-de-la-base)  
+- [⚙️ Exécution des Tests](#%EF%B8%8F-exécution-des-tests)  
+- [🛠 Technologies](#-technologies)  
 
 ---
 
