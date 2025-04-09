@@ -6,8 +6,8 @@
 - [❓ Problématique](#-problématique)  
 - [🎯 Objectifs](#-objectifs)  
 - [🧩 Diagramme de Classe](#-diagramme-de-classe)  
-- [🗃️ Modèle Conceptuel de la Base](#%EF%B8%8F-modèle-conceptuel-de-la-base)  
-- [⚙️ Exécution des Tests](#%EF%B8%8F-exécution-des-tests)  
+- [🗃️ Modèle Conceptuel de la Base](#-Modèle-conceptuel-de-la-base-généré)  
+- [⚙️ Exécution des Tests](#-Exécution-des-tests-dans-la-console)  
 - [🛠 Technologies](#-technologies)  
 
 ---
