@@ -47,13 +47,13 @@ La gestion manuelle des projets étudiants présente plusieurs défis :
 ![image](https://github.com/user-attachments/assets/40e898b5-82e4-49f8-94c3-6de36cdaa9ee)
 
 ---
-## Modèle conceptuel de la base généré
+## 🗃️ Modèle conceptuel de la base généré
 
 ![La base de données ](https://github.com/user-attachments/assets/d2c8c9b1-82fa-4ef5-8f27-6fedffd7a28d)
 
 ---
 
-## Exécution des tests dans la console
+## ⚙️ Exécution des tests dans la console
 
 ![La création des table](https://github.com/user-attachments/assets/8459d4d0-70b6-488b-92fa-54fa901ed51d)
 ![Ajout de clés étrangères ](https://github.com/user-attachments/assets/0192d4d5-b59a-4ac3-8e82-3baf3700083b)
