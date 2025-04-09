@@ -41,7 +41,7 @@ La gestion manuelle des projets étudiants présente plusieurs défis :
 ---
 
 ## 🧩 Diagramme de Classe
- ![image](https://github.com/user-attachments/assets/f2433b90-adcf-49da-ae1f-f0235a4cbb6c)
+ !(images-Copie/diagrammeClasse.png)
 
 ---
 
