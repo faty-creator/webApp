@@ -41,7 +41,7 @@ La gestion manuelle des projets étudiants présente plusieurs défis :
 ---
 
 ## 🧩 Diagramme de Classe
-![La création des table  ](images/diagrammeClasse.png)
+![image](https://github.com/user-attachments/assets/40e898b5-82e4-49f8-94c3-6de36cdaa9ee)
 
 ---
 
@@ -60,4 +60,15 @@ La gestion manuelle des projets étudiants présente plusieurs défis :
 
 ### 🗃️ Base de données :
 - **MySQL** – Système relationnel pour la gestion des données (étudiants, enseignants, projets, affectations).
+
+---
+
+## Exécution des tests dans la console
+
+![La création des table](https://github.com/user-attachments/assets/8459d4d0-70b6-488b-92fa-54fa901ed51d)
+![Ajout de clés étrangères ](https://github.com/user-attachments/assets/0192d4d5-b59a-4ac3-8e82-3baf3700083b)
+![Insertion des données dans les table](https://github.com/user-attachments/assets/35ac66db-1b96-46fc-83ba-e3c4d19324f2)
+![Selection des données dans les table](https://github.com/user-attachments/assets/ab5dc2e6-3e8b-4195-b431-4e90754afb55)
+
+
 
