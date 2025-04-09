@@ -12,16 +12,16 @@ public class ProjetEtudiant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pro")
     private int idPro;
-    
+
     @Column(name = "titre", length = 100, nullable = false)
     private String titre;
-    
+
     @Column(name = "description", length = 255)
     private String description;
-    
+
     @Column(name = "encadrent", length = 100)
     private String encadrent;
-    
+
     @Column(name = "annee", nullable = false)
     private int annee;
 

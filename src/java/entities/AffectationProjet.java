@@ -5,6 +5,10 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
+/**
+ *
+ * @author pc
+ */
 @Entity
 @Table(name = "affectation_projet")
 @IdClass(AffectationProjet.AffectationId.class)
@@ -38,10 +42,10 @@ public class AffectationProjet implements Serializable {
         this.dateFin = dateFin;
     }
 
-    // Classe interne pour la clé composite
     public static class AffectationId implements Serializable {
-        private int etudiant;  // Correspond à idUser de Etudiant
-        private int projet;    // Correspond à idPro de ProjetEtudiant
+
+        private int etudiant;
+        private int projet;
 
         public AffectationId() {
         }
@@ -53,8 +57,12 @@ public class AffectationProjet implements Serializable {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
             AffectationId that = (AffectationId) o;
             return etudiant == that.etudiant && projet == that.projet;
         }
@@ -65,21 +73,6 @@ public class AffectationProjet implements Serializable {
         }
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        AffectationProjet that = (AffectationProjet) o;
-        return Objects.equals(etudiant, that.etudiant) &&
-               Objects.equals(projet, that.projet);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(etudiant, projet);
-    }
-
-    // Getters et setters
     public Etudiant getEtudiant() {
         return etudiant;
     }
@@ -110,5 +103,23 @@ public class AffectationProjet implements Serializable {
 
     public void setDateFin(Date dateFin) {
         this.dateFin = dateFin;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        AffectationProjet that = (AffectationProjet) o;
+        return Objects.equals(etudiant, that.etudiant)
+                && Objects.equals(projet, that.projet);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(etudiant, projet);
     }
 }

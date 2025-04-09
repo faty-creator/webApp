@@ -7,6 +7,7 @@ import util.HibernateUtil;
 import java.util.List;
 
 public abstract class AbstractDao<T> implements IDao<T> {
+
     private final Class<T> entityClass;
 
     public AbstractDao(Class<T> entityClass) {
@@ -39,9 +40,13 @@ public abstract class AbstractDao<T> implements IDao<T> {
             list = session.createQuery("from " + entityClass.getSimpleName()).list();
             tx.commit();
         } catch (HibernateException e) {
-            if (tx != null) tx.rollback();
+            if (tx != null) {
+                tx.rollback();
+            }
         } finally {
-            if (session != null) session.close();
+            if (session != null) {
+                session.close();
+            }
         }
         return list;
     }
@@ -57,9 +62,13 @@ public abstract class AbstractDao<T> implements IDao<T> {
             entity = (T) session.get(entityClass, id);
             tx.commit();
         } catch (HibernateException e) {
-            if (tx != null) tx.rollback();
+            if (tx != null) {
+                tx.rollback();
+            }
         } finally {
-            if (session != null) session.close();
+            if (session != null) {
+                session.close();
+            }
         }
         return entity;
     }
@@ -75,15 +84,20 @@ public abstract class AbstractDao<T> implements IDao<T> {
             tx.commit();
             status = true;
         } catch (HibernateException e) {
-            if (tx != null) tx.rollback();
+            if (tx != null) {
+                tx.rollback();
+            }
         } finally {
-            if (session != null) session.close();
+            if (session != null) {
+                session.close();
+            }
         }
         return status;
     }
 
     @FunctionalInterface
     private interface HibernateOperation<T> {
+
         void execute(Session session);
     }
 }

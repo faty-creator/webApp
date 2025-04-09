@@ -12,7 +12,7 @@
     <mapping class="entities.User"/>
     <mapping class="entities.Etudiant"/>
     <mapping class="entities.ProjetEtudiant"/>
-    <mapping class="entities.AffectationProjet"/>
     <mapping class="entities.Admin"/>
+    <mapping class="entities.AffectationProjet"/>
   </session-factory>
 </hibernate-configuration>

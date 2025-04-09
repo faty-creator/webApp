@@ -2,6 +2,10 @@ package entities;
 
 import javax.persistence.*;
 
+/**
+ *
+ * @author pc
+ */
 @Entity
 @Table(name = "users")
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -24,8 +28,8 @@ public abstract class User {
     @Column(name = "motDePasse", nullable = false, length = 255)
     private String motDePasse;
 
-    // Constructeurs
-    public User() {}
+    public User() {
+    }
 
     public User(String nom, String prenom, String email, String motDePasse) {
         this.nom = nom;
@@ -34,9 +38,12 @@ public abstract class User {
         this.motDePasse = motDePasse;
     }
 
-    // Getters et Setters
     public Integer getId() {
         return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNom() {
