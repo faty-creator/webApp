@@ -1,10 +1,5 @@
 # 🎓 Gestion de Projets Étudiants
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Java](https://img.shields.io/badge/Java-17%2B-orange)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
-
-Application web pour la gestion des projets académiques . 
 ---
 ## 📚 Sommaire  
 - [📌 Contexte](#-contexte)  
