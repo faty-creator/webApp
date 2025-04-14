@@ -3,25 +3,22 @@ package entities;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Objects;
 
-/**
- *
- * @author pc
- */
 @Entity
 @Table(name = "affectation_projet")
-@IdClass(AffectationProjet.AffectationId.class)
 public class AffectationProjet implements Serializable {
 
-    @Id
+    @EmbeddedId
+    private AffectationId id;
+
     @ManyToOne
-    @JoinColumn(name = "etudiant_id", referencedColumnName = "id_user")
+    @MapsId("etudiantId")
+    @JoinColumn(name = "etudiant_id")
     private Etudiant etudiant;
 
-    @Id
     @ManyToOne
-    @JoinColumn(name = "projet_id", referencedColumnName = "id_pro")
+    @MapsId("projetId")
+    @JoinColumn(name = "projet_id")
     private ProjetEtudiant projet;
 
     @Column(name = "date_debut")
@@ -36,41 +33,19 @@ public class AffectationProjet implements Serializable {
     }
 
     public AffectationProjet(Etudiant etudiant, ProjetEtudiant projet, Date dateDebut, Date dateFin) {
+        this.id = new AffectationId(etudiant.getId(), projet.getIdPro());
         this.etudiant = etudiant;
         this.projet = projet;
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
     }
 
-    public static class AffectationId implements Serializable {
+    public AffectationId getId() {
+        return id;
+    }
 
-        private int etudiant;
-        private int projet;
-
-        public AffectationId() {
-        }
-
-        public AffectationId(int etudiant, int projet) {
-            this.etudiant = etudiant;
-            this.projet = projet;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (o == null || getClass() != o.getClass()) {
-                return false;
-            }
-            AffectationId that = (AffectationId) o;
-            return etudiant == that.etudiant && projet == that.projet;
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(etudiant, projet);
-        }
+    public void setId(AffectationId id) {
+        this.id = id;
     }
 
     public Etudiant getEtudiant() {
@@ -103,23 +78,5 @@ public class AffectationProjet implements Serializable {
 
     public void setDateFin(Date dateFin) {
         this.dateFin = dateFin;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        AffectationProjet that = (AffectationProjet) o;
-        return Objects.equals(etudiant, that.etudiant)
-                && Objects.equals(projet, that.projet);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(etudiant, projet);
     }
 }

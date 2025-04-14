@@ -13,19 +13,11 @@ public abstract class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_user")
     private Integer id;
 
-    @Column(name = "nom", nullable = false, length = 255)
     private String nom;
-
-    @Column(name = "prenom", nullable = false, length = 255)
     private String prenom;
-
-    @Column(name = "email", nullable = false, unique = true, length = 255)
     private String email;
-
-    @Column(name = "motDePasse", nullable = false, length = 255)
     private String motDePasse;
 
     public User() {
@@ -38,6 +30,7 @@ public abstract class User {
         this.motDePasse = motDePasse;
     }
 
+    // Getters et Setters
     public Integer getId() {
         return id;
     }

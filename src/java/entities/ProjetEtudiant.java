@@ -13,16 +13,9 @@ public class ProjetEtudiant {
     @Column(name = "id_pro")
     private int idPro;
 
-    @Column(name = "titre", length = 100, nullable = false)
     private String titre;
-
-    @Column(name = "description", length = 255)
     private String description;
-
-    @Column(name = "encadrent", length = 100)
     private String encadrent;
-
-    @Column(name = "annee", nullable = false)
     private int annee;
 
     @OneToMany(mappedBy = "projet", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -38,9 +31,13 @@ public class ProjetEtudiant {
         this.annee = annee;
     }
 
-    // Getters et setters
+   
     public int getIdPro() {
         return idPro;
+    }
+
+    public void setIdPro(int idPro) {
+        this.idPro = idPro;
     }
 
     public String getTitre() {
@@ -82,10 +79,5 @@ public class ProjetEtudiant {
     public void addAffectation(AffectationProjet affectation) {
         affectations.add(affectation);
         affectation.setProjet(this);
-    }
-
-    public void removeAffectation(AffectationProjet affectation) {
-        affectations.remove(affectation);
-        affectation.setProjet(null);
     }
 }

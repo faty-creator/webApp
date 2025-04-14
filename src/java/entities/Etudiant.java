@@ -1,17 +1,9 @@
 package entities;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Column;
-import javax.persistence.OneToMany;
-import javax.persistence.CascadeType;
 
-/**
- *
- * @author pc
- */
 @Entity
 @Table(name = "etudiants")
 public class Etudiant extends User {
